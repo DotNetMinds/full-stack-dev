@@ -1,0 +1,78 @@
+<div class="jumbotron">
+  <!-- <h1 class="display-4">Welcome to My Blog</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  </head>
+  <div class="topic-container">
+    <div class="topic-box" onclick="location.href='/topic1'">
+      <i class="topic-icon fa fa-book"></i>
+      <h3 class="topic-heading">Topic 1</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic2'">
+      <i class="topic-icon fa fa-cog"></i>
+      <h3 class="topic-heading">Topic 2</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic3'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 3</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic4'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 4</h3>
+    </div>
+    <!-- <div class="topic-box" onclick="location.href='/topic3'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 3</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic3'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 3</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic3'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 3</h3>
+    </div>
+    <div class="topic-box" onclick="location.href='/topic3'">
+      <i class="topic-icon fa fa-puzzle-piece"></i>
+      <h3 class="topic-heading">Topic 3</h3>
+    </div> -->
+  </div>
+</div>
+<div class="container my-5">
+
+  <h1 class="text-center">Latest Posts</h1>
+
+  <!-- loop content-->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of items; let i = index">
+      <div class="card mb-3">
+        <!-- <img src="/../assets/images/angular.png"  height="120px" class="card-img-top" alt="..."> -->
+        <div class="image-container">
+          <img src="assets/images/tiles-header-blue.jpg" height="60px" class="card-img-top" alt="ASP.NET MVC">
+          <div class="image-text">{{item.header}}</div>         
+        </div>
+        <div class="card-body">           
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <img src="{{getImagePath(item.logo)}}" height="50px">
+            </div>
+            <div class="col">
+              <h5>{{ item.articleTitle }}</h5>
+            </div>
+          </div>        
+          
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-danger">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
