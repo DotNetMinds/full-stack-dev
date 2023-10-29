@@ -11,6 +11,7 @@ export class UnderConstructionComponent {
   constructor(private router: Router) {
 
   }
+  
   navigateHome(): void {
     this.router.navigate(['/']);
   }
