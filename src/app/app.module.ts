@@ -10,22 +10,27 @@ import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-
+import { FormsModule } from '@angular/forms';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent, 
+    ContactUsComponent,
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [
     HttpClient

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  constructor(private router: Router) {
+  }
+
+  navigateTo(routeName: string) {
+    // Split the URL by '/'
+    const baseUrl = this.router.url.split('/').slice(0, -1).join('/');
+    console.log(`Navigating to ${baseUrl}/${routeName}`);
+    this.router.navigateByUrl(`${baseUrl}/${routeName}`);
+  }
 
 }
