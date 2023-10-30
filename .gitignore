@@ -5,4 +5,4 @@
 *.ps1
 *node_modules/*
 *dist/*
-*docs/*
+*docs*
