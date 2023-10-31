@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,46 +7,50 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  //items = Array(9).fill({});
-items =[{
-  logo: 'csharp',
-  header: 'C# Interview Questions',
-  articleTitle: 'C Sharp Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-},
-{
-  logo: 'angular',
-  header: 'Angular Interview Questions',
-  articleTitle: 'Angular Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-},
-{
-  logo: 'net-core',
-  header: '.Net Core Interview Questions',
-  articleTitle: '.Net Core Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-},
-{
-  logo: 'web-api',
-  header: 'Web API Interview Questions',
-  articleTitle: 'Web API Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-},
-{
-  logo: 'mvc',
-  header: 'ASP.NET MVC Interview Questions',
-  articleTitle: 'ASP.NET MVC Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-},
-{
-  logo: 'sql',
-  header: 'SQL Server Interview Questions',
-  articleTitle: 'SQL Interview Questions',
-  summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
-}]
-  constructor() {}
+  items = [{
+    logo: 'csharp',
+    header: 'C# Interview Questions',
+    articleTitle: 'C Sharp Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  },
+  {
+    logo: 'angular',
+    header: 'Angular Interview Questions',
+    articleTitle: 'Angular Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  },
+  {
+    logo: 'net-core',
+    header: '.Net Core Interview Questions',
+    articleTitle: '.Net Core Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  },
+  {
+    logo: 'web-api',
+    header: 'Web API Interview Questions',
+    articleTitle: 'Web API Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  },
+  {
+    logo: 'mvc',
+    header: 'ASP.NET MVC Interview Questions',
+    articleTitle: 'ASP.NET MVC Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  },
+  {
+    logo: 'sql',
+    header: 'SQL Server Interview Questions',
+    articleTitle: 'SQL Interview Questions',
+    summary: 'C Sharp Interview Questions C Sharp Interview Questions C Sharp Interview Questions'
+  }]
+  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  navigateToTopic(): void {
+    this.router.navigate(['/']);
+  }
+
   getImagePath(imageType: string) {
     switch (imageType) {
       case 'angular':
