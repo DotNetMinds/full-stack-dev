@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { RouterModule } from '@angular/router';
+import { HireMeComponent } from './hire-me/hire-me.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     HeaderComponent,
     FooterComponent, 
-    ContactUsComponent,
+    ContactUsComponent, HireMeComponent,
   ],
   imports: [
     RouterModule,
